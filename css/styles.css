@@ -1,0 +1,237 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+
+:root {
+  /* --warm-black-1: #1A1A1A;
+  --warm-black-2: #2C2828;
+  --warm-black-3: #3E3A3A;
+  --warm-black-4: #504B4B;
+  --warm-black-5: #635E5E; */
+  --warm-black-1: #252525;
+  --warm-black-2: #333333;
+  --warm-black-3: #404040;
+  --warm-black-4: #4C4C4C;
+  --warm-black-5: #595959;
+  --text-color: #CCCCCC;
+  --link-color: #FFD700;
+  --link-hover-color: #ff83ec;
+  --font-base: "Spectral", serif;
+  --font-accent: "Rancho", cursive;
+
+}
+
+/* Overwrite Bootstrap's styles */
+
+.bg-dark {
+  background-color: var(--warm-black-1) !important;
+}
+
+.bg-secondary {
+  background-color: var(--warm-black-2) !important;
+}
+
+.bg-body-tertiary {
+  background-color: var(--warm-black-3) !important;
+}
+
+/* */
+
+body {
+  font-family: var(--font-base);
+  font-weight: 300;
+  font-style: normal;
+  background-color: var(--warm-black-1);
+  color: var(--text-color);
+  font-size: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+.title {
+  font-family: var(--font-accent);
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav img {
+  width: 5%;
+  display: none;
+}
+
+header {
+  background: linear-gradient(45deg, rgba(22, 22, 22, 0.8) 0%, rgba(56, 56, 56, 0.9) 100%), url("https://live.staticflickr.com/65535/52599013293_1028bf8f6c_k.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 154px 0 100px;
+  font-family: var(--font-base);
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#map {
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  margin: 0;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background-color: var(--warm-black-2);
+  color: var(--text-color);
+  border: none;
+}
+
+#map .map-title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--text-color);
+  z-index: 500;
+}
+
+.card {
+  background-color: var(--warm-black-2);
+  color: var(--text-color);
+  /* border: none; */
+  border-radius: 2%;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+
+/* media query when the media is wider than 992px */
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px;
+  }
+
+  nav img {
+    display: inline !important;
+  }
+}
+
+
+
+/* Google Font styles */
+
+.rancho-regular {
+  font-family: "Rancho", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.spectral-extralight {
+  font-family: "Spectral", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.spectral-light {
+  font-family: "Spectral", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.spectral-regular {
+  font-family: "Spectral", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.spectral-medium {
+  font-family: "Spectral", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.spectral-semibold {
+  font-family: "Spectral", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.spectral-bold {
+  font-family: "Spectral", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.spectral-extrabold {
+  font-family: "Spectral", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.spectral-extralight-italic {
+  font-family: "Spectral", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.spectral-light-italic {
+  font-family: "Spectral", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.spectral-regular-italic {
+  font-family: "Spectral", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.spectral-medium-italic {
+  font-family: "Spectral", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.spectral-semibold-italic {
+  font-family: "Spectral", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.spectral-bold-italic {
+  font-family: "Spectral", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.spectral-extrabold-italic {
+  font-family: "Spectral", serif;
+  font-weight: 800;
+  font-style: italic;
+}
