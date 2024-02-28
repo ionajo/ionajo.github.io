@@ -8,28 +8,25 @@ const images = [
   "https://live.staticflickr.com/65535/52599013293_1028bf8f6c_k.jpg",
 ];
 
+
+
 // Function to cycle through images
-function cycleImages() {
-    const gradient = (opacity1, opacity2) => {
-        return `linear-gradient(45deg, rgba(22, 22, 22, ${opacity1}) 0%, rgba(56, 56, 56, ${opacity2}) 100%)`
-    };
-//  const gradient = `linear-gradient(45deg, rgba(22, 22, 22, 0.8) 0%, rgba(56, 56, 56, 0.9) 100%)`;
+function cycleImages(seconds, startOpacity, endOpacity) {
+  const imageContainer = document.querySelector("header");
   let index = 0;
   let image = images[index];
-  const imageContainer = document.querySelector('header');
-
-
+  const gradient = `linear-gradient(45deg, rgba(22, 22, 22, ${startOpacity}) 0%, rgba(56, 56, 56, ${endOpacity}) 100%)`;
   setInterval(() => {
     image = images[index];
-    imageContainer.style.background = `${gradient(0.8, 0.8)}, url(${image})`;
+    imageContainer.style.background = `${gradient}, url(${image})`;
     imageContainer.style.backgroundSize = "cover";
     imageContainer.style.backgroundPosition = "center";
     index = (index + 1) % images.length;
-  }, 7000);
+  }, seconds * 1000);
 }
 
 // Call the function to start cycling through images
-cycleImages();
+cycleImages(7, 0.8, 0.9);
 
 const options = {
   center: [38, -97],

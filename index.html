@@ -79,22 +79,25 @@
       </div>
     </nav>
 
-    <!-- Welcome Section -->
-    <header class="bg-secondary text-white">
-      <div class="container text-center">
-        <h1 class="display-1">Welcome, friends!</h1>
+    <!-- Welcome Section full-screen -->
+    <header class="bg-secondary text-white ">
+      <div class="container">
+        <h1>Welcome, friends!</h1>
         <p class="lead display-6 spectral-extralight">
           Let's explore the world together with maps and stories.
         </p>
       </div>
     </header>
 
-    <!-- Adventures Section -->
+    <!-- Adventures Section with map -->
     <section id="adventures" class="bg-body-tertiary">
-      <div class="container px-4 ">
+      <div class="container px-4 pt-4">
         <div class="row">
-          <div id="map"  class="rounded">
-            <h2 class="map-title display-6">Adventures</h2>
+          <h1 class="display-5">My Adventures</h1>
+        </div>
+        <div class="row">
+          <div id="map" class="rounded">
+            <p class="map-title spectral-regular">Can you find me?</p>
           </div>
         </div>
         </div>  
@@ -102,20 +105,23 @@
 
 
     <!-- Projects Section -->
-    <section id="projects" class="bg-body-tertiary">
+    <section id="projects" class="bg-body-tertiary pt-4">
       <div class="container">
+        <div class="row">
+          <h1 class="display-5">My Projects</h1>
+        </div>
         <div class="row">
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"
+              <a href="#" data-bs-toggle="modal" data-bs-target="#p01"
                 ><img
                   class="card-img-top"
-                  src="https://via.placeholder.com//430x245"
+                  src="images/project-01-rivers_th.jpg"
                   alt=""
               /></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Project One</a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#p01">Rivers of North America</a>
                 </h4>
                 <p class="card-text">
                   Globular star cluster vanquish the impossible great turbulent
@@ -130,12 +136,12 @@
               <a href="#"
                 ><img
                   class="card-img-top"
-                  src="https://via.placeholder.com//430x245"
+                  src="images/project-02-terrain_th.jpg"
                   alt=""
               /></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Project Two</a>
+                  <a href="#">3D Explorer</a>
                 </h4>
                 <p class="card-text">
                   The only home we've ever known the only home we've ever known
@@ -151,12 +157,12 @@
               <a href="#"
                 ><img
                   class="card-img-top"
-                  src="https://via.placeholder.com//430x245"
+                  src="https://live.staticflickr.com/65535/26735796303_2e13bf8085_z.jpg"
                   alt=""
               /></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Project Three</a>
+                  <a href="#">Great Smoky Mountains</a>
                 </h4>
                 <p class="card-text">
                   Cosmos the carbon in our apple pies hydrogen atoms
@@ -171,12 +177,12 @@
               <a href="#"
                 ><img
                   class="card-img-top"
-                  src="https://via.placeholder.com//430x245"
+                  src="https://live.staticflickr.com/65535/52843844210_80f346b613_z.jpg"
                   alt=""
               /></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Project Four</a>
+                  <a href="#">Campus Change, 2010-2019</a>
                 </h4>
                 <p class="card-text">
                   Preserve and cherish that pale blue dot intelligent beings
@@ -192,12 +198,12 @@
               <a href="#"
                 ><img
                   class="card-img-top"
-                  src="https://via.placeholder.com//430x245"
+                  src="https://live.staticflickr.com/7480/27309184576_df9da91961_z.jpg"
                   alt=""
               /></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Project Five</a>
+                  <a href="#">Postcard from Puerto Rico</a>
                 </h4>
                 <p class="card-text">
                   The ash of stellar alchemy white dwarf concept of the number
@@ -212,7 +218,7 @@
               <a href="#"
                 ><img
                   class="card-img-top"
-                  src="https://via.placeholder.com//430x245"
+                  src="https://live.staticflickr.com/7445/27351058215_d3acd9190b_h.jpg"
                   alt=""
               /></a>
               <div class="card-body">
@@ -230,18 +236,30 @@
         </div>
       </div>
     </section>
+    <!-- Adventures Section with map -->
+    <section  class="bg-body-tertiary py-3">
+      <div class="container">
+        <div class="row">
+          <h1 class="display-5">Who wants to visit Miami!</h1>
+        </div>
+        <div class="row">
+          <iframe id="swipe-map" src="https://ionajo.github.io/south-beach/">
+          </iframe>
+        </div>
+      </div>
+    </section>
 
     <!-- About Section -->
     <section id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 mx-auto">
-            <h2>About me</h2>
+            <h2 class="display-6 pt-4">About me</h2>
             <div class="my-5 clearfix">
-              <div class="float-md-left mb-5 mr-md-4">
+              <div class="float-md-start mb-5 me-md-4">
                 <img
-                  class="rounded-circle img-fluid"
-                  src="https://via.placeholder.com//200x200"
+                  class="rounded-circle img-fluid w-75"
+                  src="https://ionajo.github.io/tastyfreeze.github.io/images/tastyfreeze-avatar.jpg"
                   alt=""
                 />
               </div>
@@ -259,7 +277,7 @@
         </div>
         <div class="row">
           <div class="col-md-6">
-            <h3>Skillz</h3>
+            <h3>My Skills</h3>
             <ul class="list-unstyled">
               <li>
                 <strong>GIS</strong>
@@ -282,6 +300,7 @@
           </div>
           <div class="col-md-6">
             <h3>Get in touch!</h3>
+            <p>I love to collaborate on mapping projects and going on adventures in the woods. If you like Roblox, let's play.</p>
             <ul class="list-unstyled">
               <li class="">
                 <i class="fa fa-twitter me-2"></i><a href="#">@newmapsplus</a>
@@ -292,6 +311,9 @@
               <li class="">
                 <i class="fa fa-envelope me-2"></i><a href="#">nmp@uky.edu</a>
               </li>
+              <li class="">
+                <i class="fa fa-space-shuttle me-2"></i><a href="#">SkaterRobot3</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -299,13 +321,33 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-3 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">
-          Copyright &copy; IonaJo.github.io 2021
+          Copyright &copy; IonaJo.github.io 2024
         </p>
       </div>
     </footer>
+
+    <!-- Modal content -->
+    <div class="modal fade" id="p01" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content bg-dark">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Preview text</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="https://images.freeimages.com/images/small-previews/04e/sunset-1189623.jpg" class="mw-100"
+              alt="Preview of map.">
+            <p>Visit <a href="#">map link</a></p>
+          </div>
+          <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div> -->
+        </div>
+      </div>
+    </div>
 
 
 
