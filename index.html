@@ -1,360 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
 
-    <title>MAP673 Portfolio Starter Template</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-    <!-- Bootstrap CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Adventures with Iona Jo</title>
 
-    <!-- Font Awesome CSS from CDN -->
-    <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
+  <!-- Bootstrap CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- Font Awesome CSS from CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
 
-    <!-- Google web font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rancho&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-      rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
-    <!-- Custom styles for this template -->
-    <link href="css/styles.css" rel="stylesheet" />
-  </head>
+  <!-- Google web font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rancho&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
 
-  <body id="page-top">
-    <!-- Navigation -->
-    <nav
-      class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark"
-      id="mainNav"
-    >
-      <div class="container d-flex justify-content-between">
-        <div class="w-75">
-          <img src="https://ionajo.github.io/tastyfreeze.github.io/images/tastyfreeze-avatar.jpg" alt="avatar image"
+  <!-- Custom styles for this template -->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" id="mainNav">
+    <div class="container d-flex justify-content-between">
+      <div class="w-75">
+        <img src="https://ionajo.github.io/tastyfreeze.github.io/images/tastyfreeze-avatar.jpg" alt="avatar image"
           class="rounded-circle">
-        <a class="navbar-brand title ms-1" href="#page-top"
-          >Iona Jo travels with maps</a
-        >
-        </div>
-        <div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#adventures">Adventures</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-            </ul>
-          </div>
+        <a class="navbar-brand title ms-1" href="#page-top">Iona Jo travels with maps</a>
+      </div>
+      <div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#adventures">Adventures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Welcome Section full-screen -->
-    <header class="bg-secondary text-white ">
-      <div class="container">
-        <h1>Welcome, friends!</h1>
-        <p class="lead display-6 spectral-extralight">
-          Let's explore the world together with maps and stories.
-        </p>
+  <!-- Welcome Section full-screen -->
+  <header class="bg-secondary text-white ">
+    <div class="container">
+      <h1>Welcome, friends!</h1>
+      <p class="lead display-6 spectral-extralight">
+        Let's explore the world together with maps and stories.
+      </p>
+    </div>
+  </header>
+
+  <!-- Adventures Section with map -->
+  <section id="adventures" class="bg-body-tertiary">
+    <div class="container px-4 pt-4">
+      <div class="row">
+        <h1 class="display-5">My Adventures</h1>
       </div>
-    </header>
-
-    <!-- Adventures Section with map -->
-    <section id="adventures" class="bg-body-tertiary">
-      <div class="container px-4 pt-4">
-        <div class="row">
-          <h1 class="display-5">My Adventures</h1>
-        </div>
-        <div class="row">
-          <div id="map" class="rounded">
-            <p class="map-title spectral-regular">Can you find me?</p>
-          </div>
-        </div>
-        </div>  
-    </section>
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="bg-body-tertiary pt-4">
-      <div class="container">
-        <div class="row">
-          <h1 class="display-5">My Projects</h1>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="#" data-bs-toggle="modal" data-bs-target="#p01"
-                ><img
-                  class="card-img-top"
-                  src="images/project-01-rivers_th.jpg"
-                  alt=""
-              /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#p01">Rivers of North America</a>
-                </h4>
-                <p class="card-text">
-                  Globular star cluster vanquish the impossible great turbulent
-                  clouds extraordinary claims require extraordinary evidence a
-                  very small stage in a vast cosmic arena network of wormholes.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="#"
-                ><img
-                  class="card-img-top"
-                  src="images/project-02-terrain_th.jpg"
-                  alt=""
-              /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">3D Explorer</a>
-                </h4>
-                <p class="card-text">
-                  The only home we've ever known the only home we've ever known
-                  a mote of dust suspended in a sunbeam tendrils of gossamer
-                  clouds descended from astronomers two ghostly white figures in
-                  coveralls and helmets are softly dancing.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="#"
-                ><img
-                  class="card-img-top"
-                  src="https://live.staticflickr.com/65535/26735796303_2e13bf8085_z.jpg"
-                  alt=""
-              /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Great Smoky Mountains</a>
-                </h4>
-                <p class="card-text">
-                  Cosmos the carbon in our apple pies hydrogen atoms
-                  circumnavigated two ghostly white figures in coveralls and
-                  helmets are softly dancing laws of physics.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="#"
-                ><img
-                  class="card-img-top"
-                  src="https://live.staticflickr.com/65535/52843844210_80f346b613_z.jpg"
-                  alt=""
-              /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Campus Change, 2010-2019</a>
-                </h4>
-                <p class="card-text">
-                  Preserve and cherish that pale blue dot intelligent beings
-                  brain is the seed of intelligence dream of the mind's eye
-                  extraordinary claims require extraordinary evidence as a patch
-                  of light?
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="#"
-                ><img
-                  class="card-img-top"
-                  src="https://live.staticflickr.com/7480/27309184576_df9da91961_z.jpg"
-                  alt=""
-              /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Postcard from Puerto Rico</a>
-                </h4>
-                <p class="card-text">
-                  The ash of stellar alchemy white dwarf concept of the number
-                  one made in the interiors of collapsing stars inconspicuous
-                  motes of rock and gas extraplanetary.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="#"
-                ><img
-                  class="card-img-top"
-                  src="https://live.staticflickr.com/7445/27351058215_d3acd9190b_h.jpg"
-                  alt=""
-              /></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="#">Project Six</a>
-                </h4>
-                <p class="card-text">
-                  Cambrian explosion white dwarf paroxysm of global death not a
-                  sunrise but a galaxyrise dream of the mind's eye laws of
-                  physics?
-                </p>
-              </div>
-            </div>
-          </div>
+      <div class="row">
+        <div id="map" class="rounded">
+          <p class="map-title spectral-regular">Can you find me?</p>
         </div>
       </div>
-    </section>
-    <!-- Adventures Section with map -->
-    <section  class="bg-body-tertiary py-3">
-      <div class="container">
-        <div class="row">
-          <h1 class="display-5">Who wants to visit Miami!</h1>
-        </div>
-        <div class="row">
-          <iframe id="swipe-map" src="https://ionajo.github.io/south-beach/">
-          </iframe>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 mx-auto">
-            <h2 class="display-6 pt-4">About me</h2>
-            <div class="my-5 clearfix">
-              <div class="float-md-start mb-5 me-md-4">
-                <img
-                  class="rounded-circle img-fluid w-75"
-                  src="https://ionajo.github.io/tastyfreeze.github.io/images/tastyfreeze-avatar.jpg"
-                  alt=""
-                />
-              </div>
-              <p class="lead">
-                Hi, I'm Ptolemy. I'm a Geographer and Cartographer specializing
-                in frontend JS development and web mapping with such cool
-                libraries as Leaflet.
-              </p>
-              <p class="lead">
-                When I'm not banging my head against the computer I'm spinning
-                records, doing yoga, or landscape reading.
+
+  <!-- Projects Section -->
+  <section id="projects" class="bg-body-tertiary pt-4">
+    <div class="container">
+      <div class="row">
+        <h1 class="display-5">My Projects</h1>
+      </div>
+      <div class="row">
+        <!-- P1 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#p01"><img class="card-img-top"
+                src="images/project-01-rivers_th.jpg" alt="" /></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#p01">Rivers of North America</a>
+              </h4>
+              <p class="card-text">
+                Globular star cluster vanquish the impossible great turbulent
+                clouds extraordinary claims require extraordinary evidence a
+                very small stage in a vast cosmic arena network of wormholes.
               </p>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <h3>My Skills</h3>
-            <ul class="list-unstyled">
-              <li>
-                <strong>GIS</strong>
-                <p>
-                  QGIS for data analysis, manipulation, and, format conversion and PostGIS/SQL for data querying.
-                </p>
-              </li>
-              <li>
-                <strong>Web mapping</strong>
-                <p>
-                  Leaflet for raster tilesets, basic thematic mapping, and
-                  telling stories with maps.
-                </p>
-              </li>
-              <li>
-                <strong>Coding</strong>
-                <p>JavaScript</p>
-              </li>
-            </ul>
+        <!-- P2 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#p02"><img class="card-img-top" src="images/project-02-terrain_th.jpg" alt="" /></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#p02">3D Explorer</a>
+              </h4>
+              <p class="card-text">
+                The only home we've ever known the only home we've ever known
+                a mote of dust suspended in a sunbeam tendrils of gossamer
+                clouds descended from astronomers two ghostly white figures in
+                coveralls and helmets are softly dancing.
+              </p>
+            </div>
           </div>
-          <div class="col-md-6">
-            <h3>Get in touch!</h3>
-            <p>I love to collaborate on mapping projects and going on adventures in the woods. If you like Roblox, let's play.</p>
-            <ul class="list-unstyled">
-              <li class="">
-                <i class="fa fa-twitter me-2"></i><a href="#">@newmapsplus</a>
-              </li>
-              <li class="mr-2">
-                <i class="fa fa-github me-2"></i><a href="#">newmapsplus</a>
-              </li>
-              <li class="">
-                <i class="fa fa-envelope me-2"></i><a href="#">nmp@uky.edu</a>
-              </li>
-              <li class="">
-                <i class="fa fa-space-shuttle me-2"></i><a href="#">SkaterRobot3</a>
-              </li>
-            </ul>
+        </div>
+        <!-- P3 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#p03"><img class="card-img-top" src="https://live.staticflickr.com/65535/26735796303_2e13bf8085_z.jpg"
+                alt="" /></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#p03">Great Smoky Mountains</a>
+              </h4>
+              <p class="card-text">
+                Cosmos the carbon in our apple pies hydrogen atoms
+                circumnavigated two ghostly white figures in coveralls and
+                helmets are softly dancing laws of physics.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- P4 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#p04"><img class="card-img-top" src="https://live.staticflickr.com/65535/52843844210_80f346b613_z.jpg"
+                alt="" /></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#p04">Campus Change, 2010-2019</a>
+              </h4>
+              <p class="card-text">
+                Preserve and cherish that pale blue dot intelligent beings
+                brain is the seed of intelligence dream of the mind's eye
+                extraordinary claims require extraordinary evidence as a patch
+                of light?
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- P5 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#p05"><img class="card-img-top" src="https://live.staticflickr.com/7480/27309184576_df9da91961_z.jpg"
+                alt="" /></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#p05">Postcard from Puerto Rico</a>
+              </h4>
+              <p class="card-text">
+                The ash of stellar alchemy white dwarf concept of the number
+                one made in the interiors of collapsing stars inconspicuous
+                motes of rock and gas extraplanetary.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- P6 -->
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#p06"><img class="card-img-top" src="images/project-06-parks_th.jpg"
+                alt="" /></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#p06">Find a park</a>
+              </h4>
+              <p class="card-text">
+                Find a park within one mile of your location. Just click the geolocate button and see what's nearby. It will show the parks in your area and provide a list detailing the distance from your location, the park name, and the park acreage.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-3 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">
-          Copyright &copy; IonaJo.github.io 2024
-        </p>
+    </div>
+  </section>
+  <!-- Adventures Section with map -->
+  <section class="bg-body-tertiary py-3">
+    <div class="container">
+      <div class="row">
+        <h1 class="display-5">Who wants to visit Miami!</h1>
       </div>
-    </footer>
+      <div class="row">
+        <iframe id="swipe-map" src="https://ionajo.github.io/south-beach/">
+        </iframe>
+      </div>
+    </div>
+  </section>
 
-    <!-- Modal content -->
-    <div class="modal fade" id="p01" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 mx-auto">
+          <h2 class="display-6 pt-4">About me</h2>
+          <div class="my-5 clearfix">
+            <div class="float-md-start mb-5 me-md-4">
+              <img class="rounded-circle img-fluid w-75"
+                src="https://ionajo.github.io/tastyfreeze.github.io/images/tastyfreeze-avatar.jpg" alt="" />
+            </div>
+            <p class="lead">
+              Hi, I'm Ptolemy. I'm a Geographer and Cartographer specializing
+              in frontend JS development and web mapping with such cool
+              libraries as Leaflet.
+            </p>
+            <p class="lead">
+              When I'm not banging my head against the computer I'm spinning
+              records, doing yoga, or landscape reading.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>My Skills</h3>
+          <ul class="list-unstyled">
+            <li>
+              <strong>GIS</strong>
+              <p>
+                QGIS for data analysis, manipulation, and, format conversion and PostGIS/SQL for data querying.
+              </p>
+            </li>
+            <li>
+              <strong>Web mapping</strong>
+              <p>
+                Leaflet for raster tilesets, basic thematic mapping, and
+                telling stories with maps.
+              </p>
+            </li>
+            <li>
+              <strong>Coding</strong>
+              <p>JavaScript</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h3>Get in touch!</h3>
+          <p>I love to collaborate on mapping projects and going on adventures in the woods. If you like Roblox, let's
+            play.</p>
+          <ul class="list-unstyled">
+            <li class="">
+              <i class="fa fa-twitter me-2"></i><a href="#">@newmapsplus</a>
+            </li>
+            <li class="mr-2">
+              <i class="fa fa-github me-2"></i><a href="#">newmapsplus</a>
+            </li>
+            <li class="">
+              <i class="fa fa-envelope me-2"></i><a href="#">nmp@uky.edu</a>
+            </li>
+            <li class="">
+              <i class="fa fa-space-shuttle me-2"></i><a href="#">SkaterRobot3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-3 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">
+        Copyright &copy; IonaJo.github.io 2024
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal content -->
+  <!-- P1 Modal -->
+  <div class="modal fade" id="p01" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h2 class="modal-title display-5">Explore our Rivers</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-body-tertiary">
+          <iframe src="https://contig.us/hawaii/north-america-rivers/"></iframe>
+          <p>This is a project from MAP 675. Visit the <a href="https://contig.us/hawaii/north-america-rivers/" target="_blank">map link</a>.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-body-tertiary text-light" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P2 Modal -->
+  <div class="modal fade" id="p02" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h2 class="modal-title display-5">Explore Lexington's 3D surface</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-body-tertiary">
+          <img src="images/project-02-terrain.jpg" class="w-100">
+          <p>This is a MAP 675 project. Explore the map here with this <a href="https://contig.us/hawaii/terrain" target="_blank">map link</a>.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-body-tertiary text-light" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P3 Modal -->
+  <div class="modal fade" id="p03" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h2 class="modal-title display-5">Hike the Smokies</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-body-tertiary">
+          <img src="https://live.staticflickr.com/65535/26735796303_c1927a5854_o.jpg" class="w-100">
+          <p>This is a hiking map project. Download to mobile device with this <a href="https://outrageGIS.com/grsm" target="_blank">map link</a>.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-body-tertiary text-light" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- P4 Modal -->
+   <div class="modal fade" id="p04" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h2 class="modal-title display-5">Explore change on UK's campus</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-body-tertiary">
+          <img src="https://live.staticflickr.com/65535/52843844210_5205f887f7_4k.jpg" class="w-100">
+          <p>This is a GEO409 project. Explore the map here with this <a href="https://www.flickr.com/photos/28640579@N02/52843844210/in/album-72157668647475382/" target="_blank">map link</a>.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-body-tertiary text-light" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- P5 Modal -->
+    <div class="modal fade" id="p05" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-content bg-dark">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Preview text</h5>
+            <h2 class="modal-title display-5">Let's visit Old San Juan!</h2>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            <img src="https://images.freeimages.com/images/small-previews/04e/sunset-1189623.jpg" class="mw-100"
-              alt="Preview of map.">
-            <p>Visit <a href="#">map link</a></p>
+          <div class="modal-body bg-body-tertiary">
+            <img src="https://live.staticflickr.com/7480/27309184576_80b7d25ff0_o.jpg" class="w-100">
+            <p>This is a GEO409 project. Explore the map here with this <a href="https://www.flickr.com/photos/28640579@N02/27309184576/in/album-72157668647475382/" target="_blank">map link</a>.</p>
           </div>
-          <!-- <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div> -->
+          <div class="modal-footer">
+            <button type="button" class="btn bg-body-tertiary text-light" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
 
+  <!-- P6 Modal -->
+  <div class="modal fade" id="p06" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h2 class="modal-title display-5">Parks within one mile of your location</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-body-tertiary">
+          <iframe src="find-park"></iframe>
+          <p>This is a project from MAP 675. Visit the <a href="find-park" target="_blank">map link</a>.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-body-tertiary text-light" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
-    <!-- Bootstrap JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="js/scripts.js"></script>
-  </body>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/scripts.js"></script>
+</body>
+
 </html>

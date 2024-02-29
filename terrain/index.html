@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lexington 3D</title>
+  <script type="module" crossorigin src="./assets/index-0a21137a.js"></script>
+  <link rel="stylesheet" href="./assets/index-7c23b7ed.css">
+</head>
+
+<body class="bg-slate-100 p-0">
+  <div class="fixed top-2 left-2 w-48 z-10 p-2 bg-slate-300 bg-opacity-80 rounded-xl">
+    <div id="title" class="text-2xl">
+      Terrain Explorer
+    </div>
+    <div class="py-2 flex justify-between">
+      <button id="openButton" class="flex-none bg-gray-300 
+              rounded-lg p-2 text-lg hover:bg-amber-200">Details</button>
+      <button id="minimize" class="flex-none bg-gray-300 
+              rounded-lg p-2 text-lg hover:bg-amber-200">Minimize</button>
+    </div>
+    <div id="sliders">
+      <div class="py-2">
+        <div class="text-xl">DEM</div>
+        <input id="slider" type="range" value="0" class="w-full h-4 bg-gray-300 rounded-lg 
+                  overflow-hidden 
+                  appearance-none focus:outline-none 
+                  focus:bg-amber-200 transition-opacity 
+                  duration-200 opacity-70 hover:opacity-100">
+        <div class="h-4 flex justify-between">
+          <span class="flex-none">0%</span>
+          <span class="flex-none">100%</span>
+        </div>
+      </div>
+      <div class="py-2">
+        <div class="text-xl">DSM</div>
+        <input id="slider-dsm" type="range" value="0" class="w-full h-4 bg-gray-300 rounded-lg overflow-hidden 
+                      appearance-none focus:outline-none 
+                      focus:bg-amber-200 transition-opacity 
+                      duration-200 opacity-70 hover:opacity-100">
+        <div class="h-4 flex justify-between">
+          <span class="flex-none">0%</span>
+          <span class="flex-none">100%</span>
+        </div>
+      </div>
+    </div>
+    <div id="track-controls" class="hidden pt-2">
+      <p>Your current GPS Track</p>
+      <p>Distance: <span id="distance">0</span></p>
+      <div class="py-2 flex justify-between">
+        <button id="save" class="flex-none bg-gray-300 
+            rounded-lg p-2 text-lg hover:bg-amber-200">Save</button>
+        <button id="download" class="flex-none bg-gray-300 
+            rounded-lg p-2 text-lg hover:bg-amber-200">Download</button>
+      </div>
+    </div>
+
+  </div>
+  <!-- <div id="map" class="h-[96vh] w-[96vw] sm:h-screen sm:w-screen"></div> -->
+  <div id="map" class="h-screen w-screen"></div>
+  <div id="offCanvas"
+    class="fixed top-0 left-0 z-30 w-full sm:w-1/2 h-screen bg-white shadow-lg overflow-y-auto transform translate-x-[-100%] p-2">
+    <div id="closeButton" class="flex justify-start text-3xl ml-2 text-zinc-600 cursor-pointer">
+      &times;
+    </div>
+    <h1 class="text-2xl font-semibold p-2">Terrain Explorer</h1>
+    <div class="p-2 text-lg">
+      MapLibre GL JS 3D features terrain rendering with
+      <a class="text-amber-700 hover:text-anber-900 underline hover:no-underline"
+        href="https://blog.mapbox.com/global-elevation-data-6689f1d0ba65">RGB-encoded elevation raster tiles</a>. In
+      this map, we are using data from
+      <a class="text-amber-700 hover:text-amber-900 underline hover:no-underline"
+        href="https://kyfromabove.ky.gov/">KyFromAbove</a> project, which collects high resolution elevation and aerial
+      imagery for Kentucky. The aerial image base map is from 2019. The Digital Elevation Model (DEM) was created from
+      2019 lidar data and shows bare earth elevation. The lidar data was also used to create a Digital Surface Model
+      (DSM) in 2012 and shows above-ground elevations, like buildings and trees.
+    </div>
+
+    <h1 class="text-2xl font-semibold p-2">UI controls</h1>
+    <div class="p-2 text-lg">The sliders
+      allow the viewer to change the vertical exaggeration of the DEM and DSM. If geolocation is enabled, a track will
+      record the viewer's location. That track can then be saved to contig.us and downloaded as a GeoJSON.
+    </div>
+    <div class="p-2 text-lg flex justify-between">
+      <button id="all-tracks" class="flex-none bg-gray-300 
+                  rounded-lg p-2 text-lg hover:bg-amber-200">Show tracks</button>
+      <div class="relative inline-block">
+        <button id="dropdownButton" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md focus:outline-none">
+          Change the base map
+          <svg class="inline-block w-4 h-4 ml-2 -mr-1 transition-transform duration-200 transform" fill="currentColor"
+            viewBox="0 0 20 20">
+            <path d="M10 12l-6-6h12l-6 6z" />
+          </svg>
+        </button>
+        <ul id="dropdownMenu" class="absolute hidden mt-2 py-2 bg-white text-gray-700 rounded-md shadow-md">
+          <li data-map="photo" class="block px-4 py-2 hover:bg-gray-100">2019 leaf-off aerial image</li>
+          <li data-map="topo" class="block px-4 py-2 hover:bg-gray-100">Ky Topo</li>
+          <li data-map="demHillshade" class="block px-4 py-2 hover:bg-gray-100">DEM Shaded Relief</li>
+          <li data-map="dsmHillshade" class="block px-4 py-2 hover:bg-gray-100">Lexington DSM Shaded Relief</li>
+        </ul>
+      </div>
+    </div>
+    <h1 class="text-2xl font-semibold p-2">Methodology</h1>
+    <div class="p-2 text-lg pb-32">The sliders
+      allow the viewer to change the vertical exaggeration of the DEM and DSM. If geolocation is enabled, a track will
+      record the viewer's location. That track can then be saved to contig.us and downloaded as a GeoJSON.
+    </div>
+  </div>
+
+  <div id="overlay"
+    class="fixed top-0 left-0 z-10 w-screen h-screen bg-gray-800 bg-opacity-50 opacity-0 pointer-events-none"></div>
+  
+</body>
+
+</html>

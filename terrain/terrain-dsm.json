@@ -1,0 +1,27 @@
+{
+    "tiles": [
+        "https://nyc3.digitaloceanspaces.com/astoria/tiles/terrain/lex_phase1_dsm/{z}/{x}/{y}.jpg"
+    ],
+    "name": "",
+    "format": "jpeg",
+    "basename": "",
+    "id": "terrain",
+    "description": "lex_phase1_dsm",
+    "version": "1",
+    "type": "baselayer",
+    "attribution": "<a href=\"https://outragegis.com\">outrageGIS.com</a>",
+    "minzoom": 0,
+    "maxzoom": 19,
+    "bounds": [
+        -84.57580816,
+        37.98558670,
+        -84.44471841,
+        38.08148197
+    ],
+    "center": [
+        0,
+        0,
+        6
+    ],
+    "tilejson": "2.0.0"
+}
