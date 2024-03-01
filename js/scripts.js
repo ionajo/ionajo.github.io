@@ -1,16 +1,28 @@
 // Swap background images
-
 // Array of image URLs
-const images = [
-  "https://live.staticflickr.com/65535/52598489411_221279d23a_k.jpg",
-  "https://live.staticflickr.com/65535/52599013293_1028bf8f6c_k.jpg",
-  "https://live.staticflickr.com/65535/52598489411_221279d23a_k.jpg",
-  "https://live.staticflickr.com/65535/52599013293_1028bf8f6c_k.jpg",
+const preloadImages = [
+  "https://live.staticflickr.com/65535/51805630931_047e3c1719_4k.jpg",
+  "https://live.staticflickr.com/65535/51806542085_d4936f74ca_4k.jpg",
+  "https://live.staticflickr.com/65535/52598757364_60eb45e668_5k.jpg",
+  "https://live.staticflickr.com/65535/51486412718_4625ecd8e3_4k.jpg",
+  "https://live.staticflickr.com/65535/52598487121_7b3223e3e3_5k.jpg",
+  "https://live.staticflickr.com/65535/52351816399_0866412818_5k.jpg",
+  "https://live.staticflickr.com/65535/52225137705_0d63e381f6_5k.jpg",
+  "https://live.staticflickr.com/65535/51263864210_e17fb96035_4k.jpg",
+  "https://live.staticflickr.com/65535/50391587553_3c327f31ba_3k.jpg",
+  "https://live.staticflickr.com/65535/50101543461_2d66f880f6_3k.jpg",
 ];
 
+images = [];
+
+for (let i = 0; i < preloadImages.length; i++) {
+  const img = new Image();
+  img.src = preloadImages[i];
+  images.push(img.src);
+}
 
 
-// Function to cycle through images
+// Function to cycle through header background images
 function cycleImages(seconds, startOpacity, endOpacity) {
   const imageContainer = document.querySelector("header");
   let index = 0;
@@ -28,6 +40,7 @@ function cycleImages(seconds, startOpacity, endOpacity) {
 // Call the function to start cycling through images
 cycleImages(7, 0.8, 0.9);
 
+// Leaflet Map
 const options = {
   center: [38, -97],
   zoom: 4,
@@ -35,7 +48,8 @@ const options = {
   zoomControl: false,
   attributionControl: false,
 };
-// create Leaflet map and apply options
+
+// Create Leaflet map and apply options
 const map = L.map("map", options);
 
 L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
@@ -43,6 +57,7 @@ L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
+// Fetch GeoJSON data and add to map
 fetch("data/travels.geojson")
   .then((response) => {
     return response.json();
@@ -50,7 +65,7 @@ fetch("data/travels.geojson")
   .then((data) => {
     drawMap(data);
   });
-
+// Function to draw map
 function drawMap(data) {
   const travelsLayer = L.geoJson(data, {
     pointToLayer: function (feature, latlng) {
